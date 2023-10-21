@@ -1,0 +1,29 @@
+Name: Muhammad Taimur Rizwan | UCID: 30078941
+
+Platform: GitHub
+
+GitHub Link: https://github.com/Taimurrr/SENG-513-Assignment-2/tree/main
+
+GitHub Repository Name: SENG 513 Assignment 2
+
+------------------------------------------------------------------------------
+Title: Guess the Car Brand 
+
+Target Platform: The game is designed for desktop, and will be played using a web application. 
+
+Game Genre: Puzzle, word guessing game
+
+Games Objective: The primary goal of the player is to guess a car brand by selecting a limited number of letters.
+
+Rules of the Game: 
+1. The word to guess has its letters replaced with blanks
+2. Enter a letter to check if it belongs in the word. If the letter is part of the word, the blanks will be filled in the respective places. The player must guess all the letters and fill in the word to win the game.
+3. If the letter is not part of the word, an ‘Incorrect Guess’ counter is incremented up to 6 times. After 6 incorrect letters are guessed, the game ends and the player loses. 
+
+Game Mechanics:
+1. Select a page depending on which category of words the user wants to play in
+2. Type a letter 
+3. Enter the letter into the game by pressing ‘Check button.’
+4. Receive feedback about their guess, and type another letter
+5. Keep adding letters until 6 incorrect letters have been entered and the player loses OR until the blanks are filled and the word is completed
+6. If a player loses, they must press the retry button to restart

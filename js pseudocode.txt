@@ -1,0 +1,40 @@
+Declare an array variable words and assign it the provided list of car brand names.
+Declare variables wordChosen, wordDisplayArray, and wrongGuesses.
+
+Define a function named start.
+    Set wordChosen to a random element from the words array.
+    Set wordDisplayArray to an array of underscores with the length equal to the length of wordChosen.
+    Set wrongGuesses to 0.
+    Call the function updateTheWordDisplayed.
+    Call the function updateHGFigure.
+    Call the function updateTheIncorrectGuessMade.
+
+Add an event listener to the "DOMContentLoaded" event of the document, which calls the function start when the event is triggered.
+
+Define a function named submit.
+    Retrieve the value of the HTML element with the id "letter-input" and store it in a variable letterGuess after converting it to lowercase.
+    If letterGuess is not a single lowercase letter, show an alert and return.
+    If wordChosen contains letterGuess
+        Iterate through each character of wordChosen
+            If the character at the current index is equal to letterGuess, update the corresponding position in wordDisplayArray with letterGuess.
+        Call the function updateTheWordDisplayed.
+        If wordDisplayArray does not contain any underscores
+            Show an alert with a congratulatory message along with the wordChosen.
+            Call the function start.
+    Else
+        Increment the variable wrongGuesses by 1.
+        Call the function updateHGFigure.
+        Call the function updateTheIncorrectGuessMade.
+        If wrongGuesses is equal to 6
+            Show an alert with the message "You lost! The car brand was: " followed by the value of wordChosen.
+            Call the function start.
+    Set the value of the HTML element with the id "letter-input" to an empty string.
+
+Define a function named updateTheWordDisplayed.
+    Set the text content of the HTML element with the id "word-display" to the elements of the array wordDisplayArray joined with a space.
+
+Define a function named updateHGFigure.
+    // Implement the logic for updating the hangman figure.
+
+Define a function named updateTheIncorrectGuessMade.
+    Set the text content of the HTML element with the id "incorrect-guesses" to the value of the variable wrongGuesses.
