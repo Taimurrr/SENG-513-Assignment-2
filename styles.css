@@ -1,0 +1,82 @@
+/*
+SENG 513
+Due October 23rd 2023
+Assignment 2
+Muhammad Taimur Rizwan
+UCID: 30078941 
+*/
+body {
+    font-family: 'marker felt', fantasy;
+    background: linear-gradient(to bottom,#e9f1ef, #3C5556);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+#game-overview {
+    border: 1px solid #143c38;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    width: 60%; 
+    text-align: center;
+    margin: 2% auto 0 auto; /* Center 2% relative to top of page. Center horizontally by setting left and right margins to "auto" */
+    display: block; /* block-level element */
+    letter-spacing: 0.5px;
+}
+
+#user-interaction {
+    font-size: 1.1rem;
+}
+
+
+input {
+    margin: 10px;
+    padding: 5px;
+    width: 50px;
+}
+#letter-input {
+    border-radius: 12px;
+    background-color: #143c38;
+    color: #e9f1ef;
+    font-size: 1.1rem;
+    font-family: 'marker felt', fantasy;
+
+}
+
+button {
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #143c38;
+    color: #e9f1ef;
+    border-radius: 12px;
+    font-family: 'marker felt', fantasy;
+    letter-spacing: 1.5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#word-display {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#hangman-figure {
+    margin-top: 20px; 
+}
+
+#current-player {
+    font-size: 1.1rem;
+    color: red;
+}
+
+#incorrect-guesses {
+    font-size: 1.1rem;
+    color: red;
+}
+
+

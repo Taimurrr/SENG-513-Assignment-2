@@ -1,0 +1,35 @@
+<!--
+SENG 513
+Due October 23rd 2023
+Assignment 2
+Muhammad Taimur Rizwan
+UCID: 30078941 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Guess The Car Brand Game</title>
+</head>
+<body>
+    <div id="game-overview">
+        <h1>Guess The Word</h1>
+        <h2>Target Platform: Puzzle</h2>
+        <h2>Objective & Rules: Guess the car brand by entering a letter!</h2>
+    </div>
+
+    <div id="user-interaction">
+        <p id="word-display">Letter entry</p>
+        <p id="word-display"> Player <span id="current-player">1</span>, Enter one letter:</p>
+        <input type="text" id="letter-input" maxlength="1">
+        <button onclick="submit()">Submit Guess</button>
+        <p>Incorrect guesses: <span id="incorrect-guesses">0</span></p>
+        <button onclick="start()">New Game</button>
+        <p id="score">Player 1: <span id="player1-score">0</span> | Player 2: <span id="player2-score">0</span></p>
+    </div>
+    <div id="hangman-figure"></div> 
+</body>
+</html>

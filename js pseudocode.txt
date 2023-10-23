@@ -1,0 +1,73 @@
+Define words as an array of strings ['audi', 'bmw', 'mercedes', ..., 'maserati']
+Define wordChosen as an empty string
+Define wordDisplayArray as an empty array
+Define wrongGuesses as 0
+Define currentPlayer as 1
+Define player1Guesses as an empty array
+Define player2Guesses as an empty array
+Define player1Score as 0
+Define player2Score as 0
+
+On DOMContentLoaded event, call the function start
+
+Function start:
+    Set currentPlayer to 1
+    Set the text content of element with id "current-player" to currentPlayer
+    Set wordChosen to a random element from the words array
+    Set wordDisplayArray to an array filled with underscores with the same length as wordChosen
+    Set wrongGuesses to 0
+    Set player1Guesses to an empty array
+    Set player2Guesses to an empty array
+    Call the functions updateTheWordDisplayed, updateHGFigure, updateTheIncorrectGuessMade, and updatePlayerGuesses
+
+Function submit:
+    Set letterGuess to the value of the element with id "letter-input" converted to lowercase
+    If letterGuess does not match the regular expression /^[a-z]$/ or its length is not 1, then
+        Display an alert with the message "Please enter a valid single letter."
+        Return
+    If currentPlayer is 1, then add letterGuess to player1Guesses; otherwise, add letterGuess to player2Guesses
+    If wordChosen includes letterGuess, then
+        For each index i in wordChosen, do
+            If the character at index i in wordChosen is equal to letterGuess, then set the character at index i in wordDisplayArray to letterGuess
+        Call the function updateTheWordDisplayed
+        If wordDisplayArray does not include '_', then
+            Display an alert with the message "Player {currentPlayer} guessed the Brand!: {wordChosen}"
+            Call the function updateScore with currentPlayer as an argument
+            Call the function start
+    Else, do
+        Increase wrongGuesses by 1
+        Call the function updateHGFigure
+        Call the function updateTheIncorrectGuessMade
+        If wrongGuesses is equal to 6, then
+            Display an alert with the message "Player {currentPlayer} lost! The car brand was: {wordChosen}"
+            Call the function start
+    Set the value of the element with id "letter-input" to an empty string
+    If wordDisplayArray does not include '_', then
+        Display an alert with the message "Player {currentPlayer} wins! They completed the Brand!: {wordChosen}"
+        Call the function updateScore with currentPlayer as an argument
+        Call the function start
+    Else, do
+        If currentPlayer is 1, then set currentPlayer to 2; otherwise, set currentPlayer to 1
+        Set the text content of the element with id "current-player" to currentPlayer
+        Call the function updatePlayerGuesses
+
+Function updateTheWordDisplayed:
+    Set the text content of the element with id "word-display" to the elements of wordDisplayArray joined with a space
+
+Function updateHGFigure:
+    // Update the hangman figure lines
+
+Function updateTheIncorrectGuessMade:
+    Set the text content of the element with id "incorrect-guesses" to wrongGuesses
+
+Function updatePlayerGuesses:
+    Set the text content of the element with id "player1-guesses" to the elements of player1Guesses joined with a comma and a space
+    Set the text content of the element with id "player2-guesses" to the elements of player2Guesses joined with a comma and a space
+
+Function updateScore(player):
+    If player is equal to 1, then
+        Increase player1Score by 1
+        Set the text content of the element with id "player1-score" to player1Score
+    Else if player is equal to 2, then
+        Increase player2Score by 1
+        Set the text content of the element with id "player2-score" to player2Score
